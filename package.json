@@ -13,10 +13,12 @@
 		"test:unit": "vitest"
 	},
 	"devDependencies": {
+		"@iconify/svelte": "^3.1.4",
 		"@playwright/test": "^1.28.1",
 		"@skeletonlabs/skeleton": "^1.9.0",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
+		"@types/three": "^0.154.0",
 		"autoprefixer": "^10.4.14",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
@@ -32,6 +34,14 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"animate.css": "^4.1.1"
+		"@dimforge/rapier3d-compat": "^0.11.2",
+		"@theatre/core": "^0.6.1",
+		"@theatre/studio": "^0.6.1",
+		"@threlte/core": "^6.0.0-next.11",
+		"@threlte/extras": "^5.0.0-next.16",
+		"@threlte/rapier": "^1.0.0-next.3",
+		"@threlte/theatre": "^0.1.0-next.2",
+		"animate.css": "^4.1.1",
+		"three": "^0.154.0"
 	}
 }

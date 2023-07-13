@@ -1,14 +1,38 @@
 <script>
-	import '../app.postcss';
-
-	// Your selected Skeleton theme:
-	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
-
-	// This contains the bulk of Skeletons required styles:
-	import '@skeletonlabs/skeleton/styles/skeleton.css';
-
-	// Finally, your application's global stylesheet (sometimes labeled 'app.css')
-	import '../app.postcss';
+  import '../theme.postcss'
+  import '@skeletonlabs/skeleton/styles/skeleton.css'
+  import '../app.postcss'
+  import { AppShell, AppBar, LightSwitch } from '@skeletonlabs/skeleton'
 </script>
 
-<slot />
+<AppShell>
+  <svelte:fragment slot="header">
+    <AppBar class="shadow-lg flex">
+      <div class="flex justify-between">
+        <div class="flex ml-4">
+          <h1 class="text-5xl font-heading-token">brain</h1>
+          <h1 class="text-5xl text-primary-500 dark:text-tertiary-400 font-heading-token">
+            ground
+          </h1>
+        </div>
+        <div class="flex mr-4">
+          <button class="btn btn-small variant-ghost-surface w-10 h-10">
+            <iconify-icon icon="ri:github-line" width="35" /></button>
+          <button class="btn btn-small variant-ghost-surface w-10 h-10 ml-2">
+            <iconify-icon icon="tabler:brand-linkedin" width="35" /></button>
+          <div class="flex my-auto ml-6">
+            <LightSwitch />
+          </div>
+        </div>
+      </div>
+    </AppBar>
+  </svelte:fragment>
+  <!-- (sidebarLeft) -->
+  <!-- (sidebarRight) -->
+  <!-- (pageHeader) -->
+  <!-- Router Slot -->
+  <slot />
+  <!-- ---- / ---- -->
+  <svelte:fragment slot="pageFooter">Page Footer</svelte:fragment>
+  <!-- (footer) -->
+</AppShell>

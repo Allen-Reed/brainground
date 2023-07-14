@@ -21,12 +21,38 @@
       multiplier = 0.02
     }, 800)
   }
+
+  let sounds = [
+    'sounds/baby-laugh-1.mp3',
+    'sounds/baby-laugh-2.mp3',
+    'sounds/chipmunk-laugh.mp3',
+    'sounds/evil-laugh.mp3',
+    'sounds/girl-laugh.wav',
+    'sounds/man-laugh.mp3',
+    'sounds/woman-laugh.mp3'
+  ]
+
+  let previousSound = null
+
+  function playRandomSound() {
+    let randomSound
+    do {
+      const randomIndex = Math.floor(Math.random() * sounds.length)
+      randomSound = sounds[randomIndex]
+    } while (randomSound === previousSound)
+
+    previousSound = randomSound
+
+    const audio = new Audio(randomSound)
+    audio.volume = 0.2
+    audio.play()
+  }
 </script>
 
 <Environment path="/hdr/" files="desert.hdr" />
 
 <T.PerspectiveCamera makeDefault position={[4, 10, 4]} fov={50}>
-  <OrbitControls enableDamping />
+  <OrbitControls enableDamping enableZoom={false} />
 </T.PerspectiveCamera>
 
 <T.AmbientLight />
@@ -36,7 +62,10 @@
     url="/models/braincenteredscaledpink.glb"
     rotation.y={rotation}
     scale={$scale}
-    on:click={spin}
+    on:click={() => {
+      spin()
+      playRandomSound()
+    }}
     on:pointerenter={() => scale.set(1.1)}
     on:pointerleave={() => scale.set(1)} />
 </div>

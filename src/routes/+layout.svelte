@@ -33,6 +33,18 @@
   <!-- Router Slot -->
   <slot />
   <!-- ---- / ---- -->
-  <svelte:fragment slot="pageFooter">Page Footer</svelte:fragment>
+  <svelte:fragment slot="pageFooter">
+    <div class="flex justify-end border-t border-surface-400 py-3 pr-4">
+      <div class="mr-2 my-auto">Made with</div>
+      <iconify-icon icon="devicon:svelte" style="font-size: 30px;" class="mr-2" />
+      <iconify-icon icon="devicon:tailwindcss" style="font-size: 30px;" class="mr-2" />
+      <iconify-icon
+        icon="logos:threejs"
+        style="font-size: 30px;"
+        class="dark:fill-white fill-black mr-2" />
+      <iconify-icon icon="skill-icons:illustrator" style="font-size: 30px;" class="mr-2" />
+      <iconify-icon icon="simple-icons:audacity" style="font-size: 30px;" />
+    </div>
+  </svelte:fragment>
   <!-- (footer) -->
 </AppShell>

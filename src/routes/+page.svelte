@@ -28,17 +28,17 @@
 </script>
 
 <div class="flex w-full h-full flex-wrap 2xl:flex-row flex-col">
-  <div class="flex justify-end grow my-auto">
+  <div class="flex justify-center 2xl:justify-end 2xl:grow 2xl:my-auto my-12 shrink">
     <div class="flex flex-col">
       <div class="text-5xl mb-2 font-heading-token animate__animated animate__fadeInLeft">
         your skull is a jungle gym!
       </div>
       <div
-        class="flex ml-auto text-right mt-2 text-xl animate__animated animate__fadeIn w-[30rem] animate__delay-1s">
+        class="flex mx-auto 2xl:mx-0 2xl:ml-auto text-center 2xl:text-right mt-2 text-xl animate__animated animate__fadeIn w-[30rem] animate__delay-1s">
         Let's see if we can entertain that impressive brain of yours with random facts, dad jokes,
         riddles and more...
       </div>
-      <div class="flex justify-end mt-4">
+      <div class="flex 2xl:justify-end justify-center mt-4">
         <button
           class="btn variant-filled-secondary font-semibold animate__animated animate__fadeIn animate__delay-1s"
           >Let's Go!</button>
@@ -46,12 +46,12 @@
     </div>
   </div>
   <div
-    class="flex min-w-[50%] justify-start hover:cursor-pointer brain"
+    class="flex 2xl:min-w-[50%] 2xl:justify-start justify-center hover:cursor-pointer brain my-auto"
     role="button"
     tabindex="0"
     on:keydown
     on:click={() => animateCSS('.brain', 'shakeY')}>
-    <Canvas rendererParameters={{ antialias: true }}>
+    <Canvas rendererParameters={{ antialias: true }} size={{ width: 700, height: 600 }}>
       <Brain />
     </Canvas>
   </div>

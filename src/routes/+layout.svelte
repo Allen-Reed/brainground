@@ -11,7 +11,7 @@
       <div class="flex justify-between">
         <div class="flex ml-4">
           <h1 class="text-5xl font-heading-token">brain</h1>
-          <h1 class="text-5xl text-primary-500 dark:text-tertiary-400 font-heading-token">
+          <h1 class="text-5xl text-primary-500 font-heading-token dark:text-tertiary-400">
             ground
           </h1>
         </div>

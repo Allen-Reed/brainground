@@ -20,6 +20,8 @@
             <iconify-icon icon="ri:github-line" width="35" /></button>
           <button class="btn btn-small variant-ghost-surface w-10 h-10 ml-2">
             <iconify-icon icon="tabler:brand-linkedin" width="35" /></button>
+          <button class="btn btn-small variant-ghost-surface w-10 h-10 ml-2">
+            <iconify-icon icon="ph:envelope-bold" width="35" /></button>
           <div class="flex my-auto ml-6">
             <LightSwitch />
           </div>

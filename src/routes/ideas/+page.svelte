@@ -42,8 +42,10 @@
       suggestion:
     </div>
     {#if !hidden}
-      <div class="flex justify-center font-heading-token text-5xl mt-2 text-center max-w-80">
-        {activity}
+      <div class="flex justify-center font-heading-token text-5xl mt-2 text-center">
+        <div class="flex justify-center w-[30rem]">
+          {activity}
+        </div>
       </div>
     {:else}
       <div class="flex justify-center font-heading-token text-5xl mt-2 text-center">???</div>

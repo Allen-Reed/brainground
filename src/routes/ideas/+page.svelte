@@ -1,12 +1,10 @@
 <script>
   import Wheel from '../../lib/components/Wheel/Wheel.svelte'
   import 'animate.css'
-  import { RadioGroup, RadioItem } from '@skeletonlabs/skeleton'
 
   let category
   let color
   let hidden
-  let disabled
   let activity = '???'
 
   async function fetchActivity() {

@@ -16,6 +16,8 @@
   let rotationAngle = 45
   let index
   let divs
+  let clicked = false
+  let lastIndex = null
   let categories = [
     'music',
     'relaxation',
@@ -44,7 +46,8 @@
   })
 
   function getDiv() {
-    index = Math.floor(Math.random() * divs.length)
+    const randomNumber = Math.floor(Math.random() * divs.length)
+    index = randomNumber !== 0 ? randomNumber : randomNumber + 1
     category = categories[index]
     color = colorMap[category]
     categories.unshift(...categories.splice(index, categories.length - index))
@@ -64,13 +67,19 @@
 </script>
 
 <div class="w-1/3 my-auto">
-  <div class="flex justify-center mb-2">
+  {#if !clicked}
+    <div
+      class="flex justify-center mb-2 animate__animated animate__bounce animate__delay-1s font-heading-token">
+      click the wheel!
+    </div>{/if}
+  <div class="flex justify-center mb-2 animate__animated animate__bounce animate__delay-1s">
     <iconify-icon icon="icomoon-free:arrow-down" width="60" style="color: white;" />
   </div>
   <div
     class="container"
     on:keydown
     on:click={() => {
+      clicked = true
       if (!disabled) {
         spin()
         handleClick()

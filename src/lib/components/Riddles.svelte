@@ -16,13 +16,12 @@
   })
 
   async function fetchQuestion() {
-    const url = `https://api.api-ninjas.com/v1/riddles`
+    const url = `https://riddles-api.vercel.app/random`
 
     try {
       const response = await fetch(url, {
         method: 'GET',
         headers: {
-          'X-Api-Key': apiKey,
           'Content-Type': 'application/json'
         }
       })
@@ -32,8 +31,8 @@
       }
       const result = await response.json()
       loading = false
-      question = normalizeQuestion(result[0].question)
-      answer = result[0].answer
+      question = normalizeQuestion(result.riddle)
+      answer = result.answer
     } catch (error) {
       console.error('Error:', error.message)
     }
@@ -54,7 +53,10 @@
   <div class="flex justify-center text-primary-500 dark:text-primary-400 text-5xl mt-4">
     RIDDLE ME THIS:
   </div>
-  <div class="flex justify-center mt-4 text-3xl">
+  <div
+    class="flex justify-center mt-4 text-3xl"
+    class:text-xl={question.length > 250 || answer.length > 250}
+    class:text-lg={question.length > 500 || answer.length > 500}>
     {#if gameStarted && !loading}
       <div class="w-1/2 text-center capitalize">{showQuestion ? question : answer}</div>
     {:else}

@@ -43,7 +43,6 @@
   }
 
   function answerProblem(answer) {
-    console.log('ANSWER', answer)
     questionAnswered = true
     if (difficulty === 'easy') {
       correctAnswer = easyMathProblems[randomNumber].correctAnswer

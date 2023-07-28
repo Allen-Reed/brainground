@@ -37,7 +37,7 @@
         </div>
       {/if}
       {#if category === 'wordle'}
-        <div class="bg-[url('images/wordle2.jpg')] flex justify-center w-full">
+        <div class="flex justify-center w-full" style="background-image: url('images/wordle2.jpg')">
           <iframe
             class="border-2 border-gray-700 w-[752px] h-[472px]"
             title="wordle"

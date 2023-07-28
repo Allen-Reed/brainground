@@ -55,7 +55,7 @@
   }
 </script>
 
-<div class="bg-[url('images/paper.jpg')] h-[471px] w-[760px] p-auto">
+<div class="h-[471px] w-[760px] p-auto" style="background-image: url('images/paper.jpg')">
   {#if !difficulty}
     <div class="flex flex-col justify-center items-center h-full">
       <div class="text-surface-500 font-heading-token text-2xl mb-4">choose your difficulty</div>

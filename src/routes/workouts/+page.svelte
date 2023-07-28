@@ -1,12 +1,13 @@
 <script>
   import { RadioGroup, RadioItem } from '@skeletonlabs/skeleton'
   import MathProblems from '../../lib/components/MathProblems/MathProblems.svelte'
+  import { goto } from '$app/navigation'
   import 'animate.css'
 
   let category = 'math'
 </script>
 
-<div class="flex justify-between h-full my-auto">
+<div class="h-full my-auto">
   <div class="flex grow flex-col my-auto">
     <div class="flex justify-center">
       <div class="flex justify-end my-auto animate__animated animate__backInDown">
@@ -19,7 +20,7 @@
         <RadioGroup class="font-heading-token">
           <RadioItem bind:group={category} name="justify" value="math">math problems</RadioItem>
           <RadioItem bind:group={category} name="justify" value="chess">chess</RadioItem>
-          <RadioItem bind:group={category} name="justify" value="puzzle">jigsaw puzzle</RadioItem>
+          <RadioItem bind:group={category} name="justify" value="wordle">wordle</RadioItem>
         </RadioGroup>
       </div>
     </div>
@@ -35,20 +36,18 @@
             title="chessbase" />
         </div>
       {/if}
-      {#if category === 'puzzle'}
-        <iframe
-          name="proprofs"
-          id="proprofs"
-          title="puzzle"
-          height="471"
-          width="752"
-          style="overflow-x: hidden;"
-          frameborder="0"
-          marginwidth="0"
-          marginheight="0"
-          src="https://www.proprofsgames.com/jigsaw/api-game/?ew=500" />
-        <div style="font-size:10px; font-family:Arial, Helvetica, sans-serif; color:black;" />
+      {#if category === 'wordle'}
+        <div class="bg-[url('images/wordle2.jpg')] flex justify-center w-full">
+          <iframe
+            class="border-2 border-gray-700 w-[752px] h-[472px]"
+            title="wordle"
+            src="https://cdn.bubbleshooter.net/games/wordle/"
+            frameborder="0"
+            scrolling="yes" />
+        </div>
       {/if}
     </div>
   </div>
+  <button class="btn ml-4 mt-6" on:click={() => goto('/startpage')}
+    ><iconify-icon icon="fluent-emoji-high-contrast:back-arrow" width="40" /></button>
 </div>

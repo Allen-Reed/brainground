@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte'
   import { Canvas } from '@threlte/core'
+  import { goto } from '$app/navigation'
   import Brain from '$lib/components/Brain.svelte'
   import 'animate.css'
 
@@ -36,12 +37,14 @@
       <div
         class="flex mx-auto 2xl:mx-0 2xl:ml-auto text-center 2xl:text-right mt-2 text-xl animate__animated animate__fadeIn w-[30rem] animate__delay-1s">
         Let's see if we can entertain that impressive brain of yours with random facts, dad jokes,
-        riddles and more...
+        games and more...
       </div>
       <div class="flex 2xl:justify-end justify-center mt-4">
         <button
           class="btn variant-filled-secondary font-semibold animate__animated animate__fadeIn animate__delay-1s"
-          >Let's Go!</button>
+          on:click={() => {
+            goto('/startpage')
+          }}>Let's Go!</button>
       </div>
     </div>
   </div>

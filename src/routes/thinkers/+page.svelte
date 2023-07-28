@@ -1,6 +1,7 @@
 <script>
   import { RadioGroup, RadioItem } from '@skeletonlabs/skeleton'
   import 'animate.css'
+  import { goto } from '$app/navigation'
   import RandomFacts from '../../lib/components/RandomFacts.svelte'
   import DadJokes from '../../lib/components/DadJokes.svelte'
   import Trivia from '../../lib/components/Trivia.svelte'
@@ -40,4 +41,8 @@
   {:else if category === 'riddles'}
     <Riddles />
   {/if}
+  <div>
+    <button class="btn ml-4 mt-6" on:click={() => goto('/startpage')}
+      ><iconify-icon icon="fluent-emoji-high-contrast:back-arrow" width="40" /></button>
+  </div>
 </div>

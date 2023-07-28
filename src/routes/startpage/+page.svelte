@@ -1,5 +1,6 @@
 <script>
   import 'animate.css'
+  import { goto } from '$app/navigation'
 </script>
 
 <div class=" grid xl:grid-cols-3 mx-auto h-full w-2/3">
@@ -15,8 +16,9 @@
     </p>
     <img src="images/brain-idea.svg" alt="brain-idea" class="h-80 scale-x-[-1]" />
     <div class="flex w-full justify-center">
-      <button class="btn variant-filled-primary font-heading-token text-lg mt-2 w-48"
-        >get motivated!</button>
+      <button
+        class="btn variant-filled-primary font-heading-token text-lg mt-2 w-48"
+        on:click={() => goto('/ideas')}>get motivated!</button>
     </div>
   </div>
   <div class="flex justify-center p-10 flex-col animate__animated animate__fadeInUp animate__fast">
@@ -32,8 +34,9 @@
     </p>
     <img src="images/brain-thinking.svg" alt="brain-thinking" class="h-80" />
     <div class="flex w-full justify-center">
-      <button class="btn variant-filled-tertiary font-heading-token text-lg mt-1 w-48"
-        >break boredom!</button>
+      <button
+        class="btn variant-filled-tertiary font-heading-token text-lg mt-1 w-48"
+        on:click={() => goto('/thinkers')}>break boredom!</button>
     </div>
   </div>
   <div class="flex justify-center p-10 flex-col animate__animated animate__fadeInUp">
@@ -49,8 +52,9 @@
     </p>
     <img src="images/brain-workout.svg" alt="brain-workout" class="h-80 scale-x-[-1]" />
     <div class="flex w-full justify-center">
-      <button class="btn variant-filled-error font-heading-token text-lg mt-2 w-48"
-        >pump neurons!</button>
+      <button
+        class="btn variant-filled-error font-heading-token text-lg mt-2 w-48"
+        on:click={() => goto('/workouts')}>pump neurons!</button>
     </div>
   </div>
 </div>

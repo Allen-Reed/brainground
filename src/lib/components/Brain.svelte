@@ -49,7 +49,7 @@
   }
 </script>
 
-<Environment path="/hdr/" files="desert.hdr" />
+<T.DirectionalLight position={[0, 10, 10]} />
 
 <T.PerspectiveCamera makeDefault position={[4, 10, 4]} fov={50}>
   <OrbitControls enableDamping enableZoom={false} />

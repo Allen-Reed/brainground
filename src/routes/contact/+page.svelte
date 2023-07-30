@@ -1,52 +1,58 @@
-<div class="flex w-[50rem] m-auto mt-20">
+<div class="flex w-[50rem] m-auto mt-20 flex-wrap sm:flex-nowrap self-center max-w-[95%]">
   <img
     src="images/AllenPhoto1.jpg"
     alt="pure handsomness"
-    class="w-96 border-4 rounded-lg border-surface-400 dark:border-white" />
-  <div class="ml-6 w-full">
-    <div class="text-5xl w-96 font-heading-token text-surface-400 dark:text-white">allen reed</div>
-    <div class="text-xl">allenduanereed@gmail.com</div>
-    <div class="mt-4">
-      <div class="text-sm ml-4 font-semibold">Name</div>
-      <input class="input px-4 rounded-lg py-1" />
+    class="w-96 border-4 rounded-lg border-surface-400 dark:border-white object-cover" />
+  <div class="ml-6 w-full flex flex-col">
+    <div class="ml-12 sm:ml-4">
+      <div class="text-5xl w-96 font-heading-token text-surface-400 dark:text-white">
+        allen reed
+      </div>
+      <div class="text-xl">allenduanereed@gmail.com</div>
     </div>
-    <div class="mt-4">
-      <div class="text-sm ml-4 font-semibold">E-mail</div>
-      <input class="px-4 input rounded-lg py-1" type="email" />
-    </div>
-    <div class="mt-4">
-      <div class="text-sm ml-4 font-semibold">What's on your mind?</div>
-      <textarea class="input px-4 form-textarea rounded-lg" rows="3" />
-    </div>
-    <div class="flex justify-end">
-      <button class="btn btn-sm mt-4 w-20 rounded variant-ghost-surface">Send</button>
+    <div class="w-[90%] md:w-[85%] lg:w-full p-4">
+      <div class="mt-4">
+        <div class="text-sm ml-4 font-semibold">Name</div>
+        <input class="input px-4 rounded-lg py-1" />
+      </div>
+      <div class="mt-4">
+        <div class="text-sm ml-4 font-semibold">E-mail</div>
+        <input class="px-4 input rounded-lg py-1" type="email" />
+      </div>
+      <div class="mt-4">
+        <div class="text-sm ml-4 font-semibold">What's on your mind?</div>
+        <textarea class="input px-4 form-textarea rounded-lg" rows="3" />
+      </div>
+      <div class="flex justify-end">
+        <button class="btn btn-sm mt-4 w-20 rounded variant-ghost-surface">Send</button>
+      </div>
     </div>
   </div>
 </div>
-<div class="flex justify-center w-full">
+<div class="flex justify-center w-full p-4">
   <div
     class="flex justify-around flex-wrap w-[50rem] mt-8 border-4 py-4 border-surface-400 dark:border-white rounded-lg">
     <div>
-      <div class="font-heading-token text-3xl text-center text-surface-400 dark:text-white">
+      <div class="font-heading-token sm:text-3xl text-center text-surface-400 dark:text-white">
         experience
       </div>
-      <div class="block text-center text-base mt-4">
-        Svektekit<br />tailwindcss<br />React<br />Node.js<br />Threlte<br />Prisma<br />
+      <div class="block text-center sm:text-base text-sm mt-4">
+        Sveltekit<br />tailwindcss<br />React<br />Node.js<br />Threlte<br />Prisma<br />
       </div>
     </div>
     <div>
-      <div class="font-heading-token text-3xl text-center text-surface-400 dark:text-white">
+      <div class="font-heading-token sm:text-3xl text-center text-surface-400 dark:text-white">
         loves
       </div>
-      <div class="block text-center text-base mt-4">
+      <div class="block text-center sm:text-base text-sm mt-4">
         Bass guitar<br />Milk stouts<br />Cajun food<br />Game development<br />Blender<br />Metalcore<br />
       </div>
     </div>
     <div>
-      <div class="font-heading-token text-3xl text-center text-surface-400 dark:text-white">
+      <div class="font-heading-token sm:text-3xl text-center text-surface-400 dark:text-white">
         traits
       </div>
-      <div class="block text-center text-base mt-4">
+      <div class="block text-center sm:text-base text-sm mt-4">
         Highly creative<br />Friendly<br />Very loyal<br />Extrovert<br />ENFJ-T<br />Clumsy<br />
       </div>
     </div>

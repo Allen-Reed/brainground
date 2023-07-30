@@ -28,14 +28,15 @@
     })
 </script>
 
-<div class="flex w-full h-full flex-wrap 2xl:flex-row flex-col">
-  <div class="flex justify-center 2xl:justify-end 2xl:grow 2xl:my-auto my-12 shrink">
-    <div class="flex flex-col">
-      <div class="text-5xl mb-2 font-heading-token animate__animated animate__fadeInLeft">
+<div class="flex sm:w-full h-full flex-wrap 2xl:flex-row flex-col">
+  <div class="flex justify-center 2xl:justify-end 2xl:grow 2xl:my-auto my-12">
+    <div class="flex flex-col w-96">
+      <div
+        class="sm:text-5xl text-2xl mb-2 font-heading-token animate__animated animate__fadeInLeft flex justify-center">
         your skull is a jungle gym!
       </div>
       <div
-        class="flex mx-auto 2xl:mx-0 2xl:ml-auto text-center 2xl:text-right mt-2 text-xl animate__animated animate__fadeIn w-[30rem] animate__delay-1s">
+        class="flex mx-auto 2xl:mx-0 2xl:ml-auto text-center 2xl:text-right mt-2 text-xl animate__animated animate__fadeIn sm:w-[30rem] animate__delay-1s">
         Let's see if we can entertain that impressive brain of yours with random facts, dad jokes,
         games and more...
       </div>
@@ -49,12 +50,12 @@
     </div>
   </div>
   <div
-    class="flex 2xl:min-w-[50%] 2xl:justify-start justify-center hover:cursor-pointer brain my-auto"
+    class="flex 2xl:min-w-[850px] 2xl:min-h-[600px] min-w-[420px] min-h-[400px] 2xl:justify-start justify-center hover:cursor-pointer brain my-auto"
     role="button"
     tabindex="0"
     on:keydown
     on:click={() => animateCSS('.brain', 'shakeY')}>
-    <Canvas rendererParameters={{ antialias: true }} size={{ width: 700, height: 600 }}>
+    <Canvas rendererParameters={{ antialias: true }}>
       <Brain />
     </Canvas>
   </div>

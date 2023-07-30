@@ -26,7 +26,7 @@
       <img
         src="images/brain-idea.svg"
         alt="brain-idea"
-        class="2xl:h-[30rem] 2xl:w-[30rem] h-64 w-64 scale-x-[-1] self-center -mb-16 2xl:mb-0" />
+        class="2xl:h-[30rem] 2xl:w-[30rem] h-64 w-64 scale-x-[-1] self-center -mb-16 md:mb-0" />
     </div>
 
     <Wheel bind:category bind:hidden bind:color on:call={fetchActivity} />

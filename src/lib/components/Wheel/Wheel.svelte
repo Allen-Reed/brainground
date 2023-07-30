@@ -66,7 +66,7 @@
   }
 </script>
 
-<div class="my-auto scale-[.7] 2xl:scale-100 flex flex-col self-center">
+<div class="scale-[.7] md:scale-[.9] 2xl:scale-100 flex flex-col self-center">
   <div class="w-full">
     {#if !clicked}
       <div

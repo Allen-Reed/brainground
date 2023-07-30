@@ -28,11 +28,11 @@
     })
 </script>
 
-<div class="flex sm:w-full h-full flex-wrap 2xl:flex-row flex-col">
+<div class="flex w-[95%] sm:w-full h-full flex-wrap 2xl:flex-row flex-col 2xl:pr-32">
   <div class="flex justify-center 2xl:justify-end 2xl:grow 2xl:my-auto my-12">
-    <div class="flex flex-col w-96">
+    <div class="flex flex-col w-96 sm:w-full">
       <div
-        class="sm:text-5xl text-2xl mb-2 font-heading-token animate__animated animate__fadeInLeft flex justify-center">
+        class="md:text-5xl text-2xl mb-2 font-heading-token animate__animated sm:animate__fadeInLeft animate__fadeInDown flex justify-center 2xl:justify-end">
         your skull is a jungle gym!
       </div>
       <div

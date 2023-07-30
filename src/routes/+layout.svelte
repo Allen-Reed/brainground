@@ -9,14 +9,14 @@
 <AppShell>
   <svelte:fragment slot="header">
     <AppBar class="shadow-lg flex">
-      <div class="flex justify-between">
+      <div class="flex justify-center md:justify-between flex-wrap">
         <div class="flex ml-4" on:keydown on:click={() => goto('/')} role="button" tabindex="0">
           <h1 class="text-5xl font-heading-token">brain</h1>
           <h1 class="text-5xl text-primary-500 font-heading-token dark:text-tertiary-400">
             ground
           </h1>
         </div>
-        <div class="flex mr-4">
+        <div class="flex mr-4 sm:ml-auto mt-4 sm:mt-0">
           <button
             class="btn btn-small variant-ghost-surface w-10 h-10"
             on:click={() => {

@@ -19,16 +19,18 @@
   }
 </script>
 
-<div class="h-full">
+<div class="">
   <div class="flex 2xl:mt-36 mt-10 flex-col xl:flex-row">
     <div
       class="flex justify-center 2xl:p-10 flex-col animate__animated animate__backInLeft 2xl:ml-36">
       <img
         src="images/brain-idea.svg"
         alt="brain-idea"
-        class="2xl:h-[30rem] 2xl:w-[30rem] h-64 w-64 scale-x-[-1] self-center" />
+        class="2xl:h-[30rem] 2xl:w-[30rem] h-64 w-64 scale-x-[-1] self-center -mb-16 2xl:mb-0" />
     </div>
+
     <Wheel bind:category bind:hidden bind:color on:call={fetchActivity} />
+
     <div class="2xl:w-2/5 px-2 2xl:mr-36 2xl:my-auto">
       <div class="flex justify-center font-heading-token text-2xl 2xl:text-3xl">
         spin the wheel of activities!

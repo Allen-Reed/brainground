@@ -16,20 +16,29 @@
           alt="brain-idea"
           class="h-[15rem] w-[15rem] scale-x-[-1] my-auto" />
       </div>
-      <div class="mt-auto mb-4">
+      <div class="mt-auto mb-4 mr-4 sm:mr-0">
         <RadioGroup class="font-heading-token">
-          <RadioItem bind:group={category} name="justify" value="math">math problems</RadioItem>
-          <RadioItem bind:group={category} name="justify" value="chess">chess</RadioItem>
-          <RadioItem bind:group={category} name="justify" value="wordle">wordle</RadioItem>
+          <RadioItem bind:group={category} name="justify" value="math" class="text-xs sm:text-base"
+            >math</RadioItem>
+          <RadioItem bind:group={category} name="justify" value="chess" class="text-xs sm:text-base"
+            >chess</RadioItem>
+          <RadioItem
+            bind:group={category}
+            name="justify"
+            value="wordle"
+            class="text-xs sm:text-base">wordle</RadioItem>
         </RadioGroup>
       </div>
     </div>
-    <div class="flex h-[480px] w-[760px] border-4 dark:border-white border-surface-300 mx-auto">
+    <div
+      class="flex sm:h-[480px] sm:w-[760px] w-[95%] border-4 dark:border-white border-surface-300 mx-auto"
+      class:border-none={category === 'chess'}>
       {#if category === 'math'}
         <MathProblems />
       {/if}
       {#if category === 'chess'}
-        <div class="flex justify-center animate__animated animate__fadeIn mb-10">
+        <div
+          class="flex justify-center animate__animated animate__fadeIn sm:mb-10 sm:w-[753px] sm:h-[471px] w-[390px] !h-[700px]">
           <iframe
             src="https://fritz.chessbase.com"
             style="width:752px;height:471px"

@@ -56,7 +56,8 @@
         style="font-size: 30px;"
         class="dark:fill-white fill-black mr-2" />
       <iconify-icon icon="skill-icons:illustrator" style="font-size: 30px;" class="mr-2" />
-      <iconify-icon icon="simple-icons:audacity" style="font-size: 30px;" />
+      <iconify-icon icon="simple-icons:audacity" style="font-size: 30px;" class="mr-2" />
+      <iconify-icon icon="devicon:blender" style="font-size: 30px;" />
     </div>
   </svelte:fragment>
   <!-- (footer) -->

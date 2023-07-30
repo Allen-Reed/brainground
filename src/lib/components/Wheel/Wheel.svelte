@@ -66,17 +66,20 @@
   }
 </script>
 
-<div class="w-1/3 my-auto">
-  {#if !clicked}
-    <div
-      class="flex justify-center mb-2 animate__animated animate__bounce animate__delay-1s font-heading-token">
-      click the wheel!
-    </div>{/if}
-  <div class="flex justify-center mb-2 animate__animated animate__bounce animate__delay-1s">
-    <iconify-icon icon="icomoon-free:arrow-down" width="60" style="color: white;" />
+<div class="my-auto scale-[.7] 2xl:scale-100 flex flex-col self-center">
+  <div class="w-full">
+    {#if !clicked}
+      <div
+        class="flex justify-center mb-2 animate__animated animate__bounce animate__delay-1s font-heading-token w-full">
+        click the wheel!
+      </div>
+    {/if}
+    <div class="flex justify-center mb-2 animate__animated animate__bounce animate__delay-1s">
+      <iconify-icon icon="icomoon-free:arrow-down" width="60" style="color: white;" />
+    </div>
   </div>
   <div
-    class="container"
+    class="container w-[500px] h-[500px] !max-w-[500px] !min-w-[500px] !max-h-[500px] !min-h-[500px]"
     on:keydown
     on:click={() => {
       clicked = true
@@ -87,13 +90,15 @@
     }}
     role="button"
     tabindex="0">
-    <div class="education"><iconify-icon icon="octicon:book-16" width="60" /></div>
-    <div class="recreational"><iconify-icon icon="bx:happy" width="60" /></div>
-    <div class="social"><iconify-icon icon="raphael:people" width="60" /></div>
-    <div class="diy"><iconify-icon icon="ion:hammer" width="60" /></div>
-    <div class="charity"><iconify-icon icon="mdi:charity" width="60" /></div>
-    <div class="cooking"><iconify-icon icon="la:cookie-bite" width="60" /></div>
-    <div class="relaxation"><iconify-icon icon="material-symbols:chair" width="60" /></div>
-    <div class="music"><iconify-icon icon="majesticons:music" width="60" /></div>
+    <div class="education 2xl:w-60 w-20"><iconify-icon icon="octicon:book-16" width="60" /></div>
+    <div class="recreational 2xl:w-60 w-20"><iconify-icon icon="bx:happy" width="60" /></div>
+    <div class="social 2xl:w-60 w-20"><iconify-icon icon="raphael:people" width="60" /></div>
+    <div class="diy 2xl:w-60 w-20"><iconify-icon icon="ion:hammer" width="60" /></div>
+    <div class="charity 2xl:w-60 w-20"><iconify-icon icon="mdi:charity" width="60" /></div>
+    <div class="cooking 2xl:w-60 w-20"><iconify-icon icon="la:cookie-bite" width="60" /></div>
+    <div class="relaxation 2xl:w-60 w-20">
+      <iconify-icon icon="material-symbols:chair" width="60" />
+    </div>
+    <div class="music 2xl:w-60 w-40"><iconify-icon icon="majesticons:music" width="60" /></div>
   </div>
 </div>

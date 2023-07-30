@@ -20,13 +20,17 @@
 </script>
 
 <div class="h-full">
-  <div class="flex mt-36">
-    <div class="flex justify-center p-10 flex-col animate__animated animate__backInLeft ml-36">
-      <img src="images/brain-idea.svg" alt="brain-idea" class="h-[30rem] w-[30rem] scale-x-[-1]" />
+  <div class="flex 2xl:mt-36 mt-10 flex-col xl:flex-row">
+    <div
+      class="flex justify-center 2xl:p-10 flex-col animate__animated animate__backInLeft 2xl:ml-36">
+      <img
+        src="images/brain-idea.svg"
+        alt="brain-idea"
+        class="2xl:h-[30rem] 2xl:w-[30rem] h-64 w-64 scale-x-[-1] self-center" />
     </div>
     <Wheel bind:category bind:hidden bind:color on:call={fetchActivity} />
-    <div class="w-2/5 mr-36 my-auto">
-      <div class="flex justify-center font-heading-token text-3xl">
+    <div class="2xl:w-2/5 px-2 2xl:mr-36 2xl:my-auto">
+      <div class="flex justify-center font-heading-token text-2xl 2xl:text-3xl">
         spin the wheel of activities!
       </div>
       <div
@@ -44,16 +48,18 @@
         suggestion:
       </div>
       {#if !hidden}
-        <div class="flex justify-center font-heading-token text-5xl mt-2 text-center">
+        <div class="flex justify-center font-heading-token text-4xl 2xl:text-5xl mt-2 text-center">
           <div class="flex justify-center w-[30rem]">
             {activity}
           </div>
         </div>
       {:else}
-        <div class="flex justify-center font-heading-token text-5xl mt-2 text-center">???</div>
+        <div class="flex justify-center font-heading-token text-4xl 2xl:text-5xl mt-2 text-center">
+          ???
+        </div>
       {/if}
     </div>
   </div>
-  <button class="btn ml-4 mt-auto" on:click={() => goto('/startpage')}
+  <button class="btn ml-4 2xl:mt-auto mt-10" on:click={() => goto('/startpage')}
     ><iconify-icon icon="fluent-emoji-high-contrast:back-arrow" width="40" /></button>
 </div>

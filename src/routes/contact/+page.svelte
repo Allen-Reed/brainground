@@ -16,6 +16,9 @@
     })
     const data = await res.json()
     message = data.message
+    name = ''
+    email = ''
+    body = ''
   }
 </script>
 
@@ -56,7 +59,7 @@
 </div>
 <div class="flex justify-center w-full p-4">
   <div
-    class="flex justify-around flex-wrap w-[50rem] mt-8 border-4 py-4 border-surface-400 dark:border-white rounded-lg">
+    class="flex justify-around flex-wrap w-[50rem] mt-4 border-4 py-4 border-surface-400 dark:border-white rounded-lg">
     <div>
       <div class="font-heading-token sm:text-3xl text-center text-surface-400 dark:text-white">
         experience

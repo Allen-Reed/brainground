@@ -7,7 +7,7 @@ export const easyMathProblems = [
   {
     problem: 'Calculate: 84 - 35 = ?',
     choices: ['39', '49', '59', '69'],
-    correctAnswer: '39'
+    correctAnswer: '49'
   },
   {
     problem: 'What is the product of 12 and 6?',

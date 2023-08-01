@@ -30,9 +30,13 @@
         throw new Error('Network response was not ok')
       }
       const result = await response.json()
-      loading = false
-      question = normalizeQuestion(result.riddle)
-      answer = result.answer
+      if (result.riddle.length < 250 || result.riddle.answer > 250) {
+        loading = false
+        question = normalizeQuestion(result.riddle)
+        answer = result.answer
+      } else {
+        fetchQuestion()
+      }
     } catch (error) {
       console.error('Error:', error.message)
     }
@@ -55,8 +59,7 @@
   </div>
   <div
     class="flex justify-center mt-4 text-3xl"
-    class:text-xl={question.length > 250 || answer.length > 250}
-    class:text-lg={question.length > 500 || answer.length > 500}>
+    class:text-xl={question.length > 120 || answer.length > 120}>
     {#if gameStarted && !loading}
       <div class="w-1/2 text-center capitalize">{showQuestion ? question : answer}</div>
     {:else}

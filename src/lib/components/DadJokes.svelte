@@ -30,7 +30,9 @@
 
 <div class="h-1/3 animate__animated animate__fadeInUp w-full">
   <div class="flex justify-center text-warning-600 dark:text-warning-400 text-5xl mt-4">JOKE:</div>
-  <div class="flex justify-center mt-4 text-3xl"><div class="w-1/2 text-center">{joke}</div></div>
+  <div class="flex justify-center mt-4 text-3xl">
+    <div class="w-2/3 text-center">{joke}</div>
+  </div>
   <div class="flex justify-center">
     <button
       on:click={fetchFact}

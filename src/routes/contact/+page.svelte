@@ -26,7 +26,7 @@
   <img
     src="images/AllenReed1.png"
     alt="pure handsomness"
-    class="max-w-80 w-80 h-[26rem] max-h-[26rem] border-4 rounded-lg border-surface-400 dark:border-white object-cover" />
+    class="max-w-80 w-96 h-[26rem] max-h-[26rem] border-4 rounded-lg border-surface-400 dark:border-white object-cover" />
   <div class="ml-6 w-full flex flex-col">
     <div class="ml-12 sm:ml-4">
       <div class="text-5xl w-96 font-heading-token text-surface-400 dark:text-white">

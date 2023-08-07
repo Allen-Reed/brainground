@@ -81,9 +81,9 @@
   </div>
   <div class="flex justify-center mt-4 text-xl 2xl:text-3xl">
     {#if gameStarted && !loading}
-      <div class="w-2/3 text-center">{showQuestion ? question : answer + '.'}</div>
+      <div class="w-1/2 text-center">{showQuestion ? question : answer + '.'}</div>
     {:else}
-      <div class="w-2/3 text-center">{placeholder}</div>
+      <div class="w-1/2 text-center">{placeholder}</div>
     {/if}
   </div>
   <div class="flex justify-center">

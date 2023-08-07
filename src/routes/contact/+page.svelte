@@ -24,7 +24,7 @@
 
 <div class="flex w-[50rem] m-auto mt-20 flex-wrap sm:flex-nowrap self-center max-w-[95%]">
   <img
-    src="images/AllenPhoto1.jpg"
+    src="images/AllenReed1.png"
     alt="pure handsomness"
     class="max-w-80 w-80 h-[26rem] max-h-[26rem] border-4 rounded-lg border-surface-400 dark:border-white object-cover" />
   <div class="ml-6 w-full flex flex-col">

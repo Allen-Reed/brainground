@@ -55,7 +55,7 @@
   }
 </script>
 
-<div class="h-[471px] w-[760px] p-auto" style="background-image: url('images/paper.jpg')">
+<div class="h-[471px] sm:w-[760px] p-auto w-full" style="background-image: url('images/paper.jpg')">
   {#if !difficulty}
     <div class="flex flex-col justify-center items-center h-full">
       <div class="text-surface-500 font-heading-token text-2xl mb-4">choose your difficulty</div>
@@ -110,7 +110,7 @@
     <div class="h-[70%] py-auto w-full mt-8">
       <div>
         <div class="text-xl font-semibold flex justify-center w-full text-black">
-          <div class="w-[30rem] flex justify-center">
+          <div class="w-[30rem] flex justify-center ml-1 sm:ml-0">
             {question}
           </div>
         </div>

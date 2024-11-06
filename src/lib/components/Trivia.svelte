@@ -16,7 +16,7 @@
   })
 
   async function fetchQuestion() {
-    const url = `https://api.api-ninjas.com/v1/trivia?category=${category}`
+    const url = `https://api.api-ninjas.com/v1/trivia?category=${category}, { mode: 'no-cors' }`
 
     try {
       const response = await fetch(url, {

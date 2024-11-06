@@ -10,7 +10,7 @@
 
   async function fetchActivity() {
     try {
-      const response = await fetch(`https://www.boredapi.com/api/activity?type=${category}`)
+      const response = await fetch(`https://www.boredapi.com/api/activity?type=${category}`, { mode: 'no-cors' })
       const data = await response.json()
       activity = data.activity
     } catch (error) {
